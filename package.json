@@ -1,0 +1,19 @@
+{
+  "name": "deux",
+  "version": "1.0.0",
+  "description": "An automated build server compiler for C++ using NodeJS.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edinjusupovic/Deux.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edinjusupovic/Deux/issues"
+  },
+  "homepage": "https://github.com/edinjusupovic/Deux#readme"
+}
