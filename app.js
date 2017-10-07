@@ -2,6 +2,7 @@ const { exec } = require('child_process');
 const fs = require('fs');
 
 
+
 // <== CPP FILES TO OBJECT ==> 
 async function cppToObject () {
     return new Promise((resolve, reject) => {
@@ -69,9 +70,22 @@ async function finalBuildExecution () {
 
 (async () => {
    try {
-//process.argv.forEach(function (val, index, array) {
-//  console.log(index + ': ' + val);
-//});
+       
+let argumentsArray = [];   
+let finalArrayString = ''; 
+       
+// Useful in an array for later development
+process.argv.forEach(function (val, index) {
+    if (index >= 3){
+       argumentsArray.push(val);
+    }
+});
+       
+argumentsArray.forEach((value) =>{
+    finalArrayString += `${value} `
+})
+       console.log(argumentsArray);
+       console.log(finalArrayString);
        
        let cppStatus = await cppToObject(); 
         console.log(cppStatus);
@@ -86,8 +100,6 @@ async function finalBuildExecution () {
         console.log(finalData);
        
        let cleanObjectStatus = await deleteObjectFiles();
-        
-       
        let cleanExeStatus = await deleteExeFiles();
        
        

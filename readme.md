@@ -23,7 +23,7 @@ npm install -y
 Execute Deux with a c++ file: 
 
 ```
-nodemon deux.js -s example.cpp 
+nodemon --watch build/* app.js -s example1.cpp example2.cpp example3.cpp 
 ```
 
 Deux output: 
